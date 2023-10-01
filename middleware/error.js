@@ -4,13 +4,17 @@ const errorHandler = (err, req, res, next) => {
   const error = { ...err };
 
   error.message = err.message;
+  console.log(error.message);
 
-  // if (error.name === "CastError") {
-  //   error.message = "Энэ ID буруу бүтэцтэй ID байна!";
-  //   error.statusCode = 400;
-  // }
+  if (error.message.startsWith('User validation failed: password: Path `password`')) {
+    error.message = "Password must have at least 4 letters";
+    error.statusCode = 400;
+  }
 
-  // jwt malformed
+  if (error.message === "jwt malformed") {
+    error.message = "Та логин хийж байж энэ үйлдлийг хийх боломжтой...";
+    error.statusCode = 401;
+  }
 
   if (error.message === "jwt malformed") {
     error.message = "Та логин хийж байж энэ үйлдлийг хийх боломжтой...";
@@ -27,7 +31,7 @@ const errorHandler = (err, req, res, next) => {
     error.statusCode = 400;
   }
 
-  res.status(err.statusCode || 500).json({
+  res.status(error.statusCode || 500).json({
     success: false,
     error,
   });
