@@ -1,0 +1,1453 @@
+{
+	"info": {
+		"_postman_id": "8c392bca-e004-43dd-a039-8784afd5021b",
+		"name": "Amazon.mn MongoDB REST Api Backend",
+		"description": "Amazon.mn номын дэлгүүрийн REST API backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Категориуд",
+			"item": [
+				{
+					"name": "Бүх категориудыг авах",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/v1/categories",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"categories"
+							]
+						},
+						"description": "Бүх категориудыг хуудаслаж, шүүж, эрэмбэлж ... авна."
+					},
+					"response": []
+				},
+				{
+					"name": "Нэг категорийг авах",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/v1/categories/5e90434cd433fa11b078ed8a",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								"5e90434cd433fa11b078ed8a"
+							]
+						},
+						"description": "Нэг категорийн мэдээллийг авна. ID дамжуулна"
+					},
+					"response": []
+				},
+				{
+					"name": "Шинээр категори үүсгэх",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Уран зохио\",\n\t\"description\": \"Дэлхийн сонгодог уран зохиулуудаас эндээс үзээрэй!\",\n\t\"photo\": \"literature.jpg\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/categories",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"categories"
+							]
+						},
+						"description": "Шинээр категори үүсгэх апи"
+					},
+					"response": []
+				},
+				{
+					"name": "Байгаа категорийн мэдээллийг өөрчлөх",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Уран зохиол\",\n\t\"photo123\": \"lit123.jpg\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/categories/5e90434cd433fa11b078ed8a",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								"5e90434cd433fa11b078ed8a"
+							]
+						},
+						"description": "Байгаа категорийн мэдээллийг өөрчлөх"
+					},
+					"response": []
+				},
+				{
+					"name": "Категорийг устгана",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlYTNlODNiZjkzMmVhMzk0NDk1NmJmOSIsImlhdCI6MTU4Nzg5OTU5OSwiZXhwIjoxNTkwNDkxNTk5fQ.fFGFvvI3CnRTXRyVo1mrN9SxpzkklI6zP25HHP7t_co",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/v1/categories/5e90434cd433fa11b078ed8a",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								"5e90434cd433fa11b078ed8a"
+							]
+						},
+						"description": "ID дамжуулахад уг категорийг өгөгдлийн сангаас устгана."
+					},
+					"response": []
+				},
+				{
+					"name": "Категориудыг төрөл бүрээр шүүж авах",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/v1/categories?select=name averagePrice averageRating&sort=averageRating -averagePrice&limit=3&page=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "select",
+									"value": "name averagePrice averageRating"
+								},
+								{
+									"key": "sort",
+									"value": "averageRating -averagePrice"
+								},
+								{
+									"key": "limit",
+									"value": "3"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Категориудыг төрөл бүрээр шүүж авах"
+					},
+					"response": []
+				},
+				{
+					"name": "Нэг категорийн номуудыг төрөл бүрээр шүүж авах",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/v1/categories/5e90434cd433fa11b078ed8a/books?select=name price&sort=-price&price[$lt]=30000&page=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								"5e90434cd433fa11b078ed8a",
+								"books"
+							],
+							"query": [
+								{
+									"key": "select",
+									"value": "name price"
+								},
+								{
+									"key": "sort",
+									"value": "-price"
+								},
+								{
+									"key": "price[$lt]",
+									"value": "30000"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Нэг категорийн номуудыг төрөл бүрээр шүүж авах"
+					},
+					"response": []
+				}
+			],
+			"description": "Номнуудын категориудтай ажиллах хэсэг",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Номууд",
+			"item": [
+				{
+					"name": "Бүх номуудыг авах",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/v1/books",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"books"
+							]
+						},
+						"description": "Бүх номуудыг авах"
+					},
+					"response": []
+				},
+				{
+					"name": "Заагдсан категорийн номуудыг авах",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/v1/categories/5e90478549941f52dcb01b34/books",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								"5e90478549941f52dcb01b34",
+								"books"
+							]
+						},
+						"description": "Заагдсан категорийн номуудыг авах"
+					},
+					"response": []
+				},
+				{
+					"name": "Шинээр ном нэмэх",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"D програмчлалд алхам алхмаар\",\r\n    \"photo\": \"/prog.jpg\",\r\n    \"author\": \"Д.Батмөнх\",\r\n    \"rating\": 4.0,\r\n    \"price\": 10000,\r\n    \"balance\": 6,\r\n    \"content\": \"Энэ товхимолд алгоритм програмчлалын хэлний үндсэн ойлголтуудыг Dev-С++ програмчлалын хэл дээр бодож, товч онол, жишээ бодлого, бататгал дасгалын хамт оруулсан бөгөөд онол, аргуудыг хэрэглээн дээр суурилан тайлбарлалаа.\",\r\n    \"bestseller\": false,\r\n    \"available\": [\"old\"],\r\n    \"category\": \"5e90478549941f52dcb01b34\"\r\n  }"
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/books/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"books",
+								""
+							]
+						},
+						"description": "Шинээр ном нэмэх"
+					},
+					"response": []
+				},
+				{
+					"name": "Заагдсан нэг номын мэдээллийг буцаана",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/react/Desktop/white-and-blue-ceramic-mug-near-green-plant-1516983.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/books/5e9d481d01d2c0386862d04b",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"books",
+								"5e9d481d01d2c0386862d04b"
+							]
+						},
+						"description": "Заагдсан нэг номын мэдээллийг буцаана"
+					},
+					"response": []
+				},
+				{
+					"name": "Заагдсан нэг номыг устгана",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\n\t\n\t\"name\": \"changed...\",\n\t\"price\": 343434\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/books/5e9d481d01d2c0386862d04b",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"books",
+								"5e9d481d01d2c0386862d04b"
+							]
+						},
+						"description": "Заагдсан нэг номыг устгана"
+					},
+					"response": []
+				},
+				{
+					"name": "Заагдсан номын мэдээллийг өөрчилнө",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlYTNlODNiZjkzMmVhMzk0NDk1NmJmOSIsImlhdCI6MTU4Nzg5NzIwOCwiZXhwIjoxNTkwNDg5MjA4fQ.PV1dw_xYBoblcyE-F--bwtFx9Jir0GBuUijNmoFwWIE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"test214...\",\n\t\"price\": 343434\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/books/5eb6cd731f65902be0da1d89",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"books",
+								"5eb6cd731f65902be0da1d89"
+							]
+						},
+						"description": "Заагдсан номын мэдээллийг өөрчилнө"
+					},
+					"response": []
+				},
+				{
+					"name": "Номын зургийг upload хийнэ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/react/Desktop/white-and-blue-ceramic-mug-near-green-plant-1516983.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/books/5e9d481d01d2c0386862d04b/upload-photo",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"books",
+								"5e9d481d01d2c0386862d04b",
+								"upload-photo"
+							]
+						},
+						"description": "Номын зургийг upload хийнэ"
+					},
+					"response": []
+				},
+				{
+					"name": "Номуудыг төрөл бүрээр шүүх",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/v1/books?select=name price&sort=-price&price[$gt]=20000",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"books"
+							],
+							"query": [
+								{
+									"key": "select",
+									"value": "name price"
+								},
+								{
+									"key": "sort",
+									"value": "-price"
+								},
+								{
+									"key": "price[$gt]",
+									"value": "20000"
+								}
+							]
+						},
+						"description": "Номуудыг төрөл бүрээр шүүх"
+					},
+					"response": []
+				},
+				{
+					"name": "Номын комментуудыг авах",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/users/2/comments",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"2",
+								"comments"
+							]
+						},
+						"description": "Номын комментуудыг авах"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Хэрэглэгчид",
+			"item": [
+				{
+					"name": "Хэрэглэгч бүртгүүлэх",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cbfdd0c8-9252-4650-89fb-d7048f7d1ad1",
+								"exec": [
+									"pm.environment.set('TOKEN', pm.response.json().token)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"naraa12\",\n\t\"email\": \"naraa212@gmail.com\",\n\t\"password\": \"saraa12\",\n\t\"role\": \"user\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/users/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"register"
+							]
+						},
+						"description": "Хэрэглэгч шинээр бүртгэх"
+					},
+					"response": []
+				},
+				{
+					"name": "Хэрэглэгч логин хийх",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bdc3b60b-7c69-4f20-a24e-487a6e8c3673",
+								"exec": [
+									"pm.environment.set('TOKEN', pm.response.json().token)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"admin@gmail.com\",\n\t\"password\": \"1234\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/users/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"login"
+							]
+						},
+						"description": "Хэрэглэгч логин хийх"
+					},
+					"response": []
+				},
+				{
+					"name": "Хэрэглэгч гарах (logout)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bdc3b60b-7c69-4f20-a24e-487a6e8c3673",
+								"exec": [
+									"pm.environment.set('TOKEN', pm.response.json().token)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"admin@gmail.com\",\n\t\"password\": \"1234\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/users/logout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"logout"
+							]
+						},
+						"description": "Хэрэглэгч гарах (logout)"
+					},
+					"response": []
+				},
+				{
+					"name": "Бүх хэрэглэгчдийг авах",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cbfdd0c8-9252-4650-89fb-d7048f7d1ad1",
+								"exec": [
+									"pm.environment.set('TOKEN', pm.response.json().token)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						},
+						"description": "Бүх хэрэглэгчдийг авах"
+					},
+					"response": []
+				},
+				{
+					"name": "Заагдсан хэрэглэгчийн мэдээллийг буцаах",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cbfdd0c8-9252-4650-89fb-d7048f7d1ad1",
+								"exec": [
+									"pm.environment.set('TOKEN', pm.response.json().token)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/users/5ea5723aab227a55b42f6e75",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"5ea5723aab227a55b42f6e75"
+							]
+						},
+						"description": "Заагдсан хэрэглэгчийн мэдээллийг буцаах"
+					},
+					"response": []
+				},
+				{
+					"name": "Заагдсан хэрэглэгчийн мэдээллийг өөрчлөх",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cbfdd0c8-9252-4650-89fb-d7048f7d1ad1",
+								"exec": [
+									"pm.environment.set('TOKEN', pm.response.json().token)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\" : \"Dorjsurend\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/users/5ea5723aab227a55b42f6e75",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"5ea5723aab227a55b42f6e75"
+							]
+						},
+						"description": "Заагдсан хэрэглэгчийн мэдээллийг өөрчлөх"
+					},
+					"response": []
+				},
+				{
+					"name": "Заагдсан хэрэглэгчийг устгах",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cbfdd0c8-9252-4650-89fb-d7048f7d1ad1",
+								"exec": [
+									"pm.environment.set('TOKEN', pm.response.json().token)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/users/5ea5723aab227a55b42f6e75",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"5ea5723aab227a55b42f6e75"
+							]
+						},
+						"description": "Заагдсан хэрэглэгчийг устгах"
+					},
+					"response": []
+				},
+				{
+					"name": "Хэрэглэгч шинээр үүсгэх",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cbfdd0c8-9252-4650-89fb-d7048f7d1ad1",
+								"exec": [
+									"pm.environment.set('TOKEN', pm.response.json().token)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"naraa12\",\n\t\"email\": \"naraa212@gmail.com\",\n\t\"password\": \"saraa12\",\n\t\"role\": \"user\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						},
+						"description": "Хэрэглэгч шинээр үүсгэх"
+					},
+					"response": []
+				},
+				{
+					"name": "Заагдсан хэрэглэгчийн номнуудыг авах",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cbfdd0c8-9252-4650-89fb-d7048f7d1ad1",
+								"exec": [
+									"pm.environment.set('TOKEN', pm.response.json().token)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/users/5ea015a84448022f50c58be5/books",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"5ea015a84448022f50c58be5",
+								"books"
+							]
+						},
+						"description": "Заагдсан хэрэглэгчийн номнуудыг авах"
+					},
+					"response": []
+				},
+				{
+					"name": "Мартсан нууц үгийг сэргээх имэйл илгээх",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cbfdd0c8-9252-4650-89fb-d7048f7d1ad1",
+								"exec": [
+									"pm.environment.set('TOKEN', pm.response.json().token)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"user@gmail.com\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/users/forgot-password",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"forgot-password"
+							]
+						},
+						"description": "Мартсан нууц үгийг сэргээх имэйл илгээх"
+					},
+					"response": []
+				},
+				{
+					"name": "Токен ашиглан нууц үгийг солих",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cbfdd0c8-9252-4650-89fb-d7048f7d1ad1",
+								"exec": [
+									"pm.environment.set('TOKEN', pm.response.json().token)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"password\": \"111111\",\n\t\"resetToken\": \"9b9f5fcf3bdfc5e364eee1a7a4428a3985d5f4b1\" \n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/users/reset-password",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"reset-password"
+							]
+						},
+						"description": "Токен ашиглан нууц үгийг солих"
+					},
+					"response": []
+				},
+				{
+					"name": "Заагдсан хэрэглэгчийн бичсэн комментуудыг авах",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cbfdd0c8-9252-4650-89fb-d7048f7d1ad1",
+								"exec": [
+									"pm.environment.set('TOKEN', pm.response.json().token)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/users/2/comments",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"2",
+								"comments"
+							]
+						},
+						"description": "Заагдсан хэрэглэгчийн бичсэн комментуудыг авах"
+					},
+					"response": []
+				}
+			],
+			"description": "Системийн хэрэглэгчидтэй ажиллах endpoint",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Тайлбар",
+			"item": [
+				{
+					"name": "Коммент үүсгэх",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": \"1\",\n\t\"bookId\": \"2\",\n\t\"comment\": \"my@gmail.com\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/comments",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"comments"
+							]
+						},
+						"description": "Коммент үүсгэх"
+					},
+					"response": []
+				},
+				{
+					"name": "Коммент өөрчлөх",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"comment\": \"гоё гоё\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/comments/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"comments",
+								"2"
+							]
+						},
+						"description": "Коммент өөрчлөх"
+					},
+					"response": []
+				},
+				{
+					"name": "Коммент устгах",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/comments/5",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"comments",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Коммент ийг ID аар авах",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/comments/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"comments",
+								"2"
+							]
+						},
+						"description": "Коммент ийг ID аар авах"
+					},
+					"response": []
+				},
+				{
+					"name": "Комментуудыг авах",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/v1/comments",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"comments"
+							]
+						},
+						"description": "Комментуудыг авах"
+					},
+					"response": []
+				},
+				{
+					"name": "Комментуудыг шүүж авах",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/v1/comments?select=userId bookId comment&sort=-userId&limit=5&page=2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"comments"
+							],
+							"query": [
+								{
+									"key": "select",
+									"value": "userId bookId comment"
+								},
+								{
+									"key": "sort",
+									"value": "-userId"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								},
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						},
+						"description": "Комментуудыг шүүж авах"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
