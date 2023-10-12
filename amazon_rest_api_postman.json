@@ -1,8 +1,8 @@
 {
 	"info": {
 		"_postman_id": "8c392bca-e004-43dd-a039-8784afd5021b",
-		"name": "Amazon.mn MongoDB REST Api Backend",
-		"description": "Amazon.mn номын дэлгүүрийн REST API backend",
+		"name": "New world MongoDB REST Api Backend",
+		"description": "New world bookstore REST API backend",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [

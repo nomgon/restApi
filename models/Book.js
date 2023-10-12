@@ -31,7 +31,7 @@ const BookSchema = new mongoose.Schema(
     price: {
       type: Number,
       required: [true, "Номны үнийг оруулна уу"],
-      min: [500, "Номын үнэ хамгийн багадаа 500 төгрөг байх ёстой"],
+      min: [5, "Номын үнэ хамгийн багадаа 5 доллар байх ёстой"],
     },
     balance: Number,
     content: {
