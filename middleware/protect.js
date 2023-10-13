@@ -15,7 +15,7 @@ exports.protect = asyncHandler(async (req, res, next) => {
 
   if (!token) {
     throw new MyError(
-      "Энэ үйлдлийг хийхэд таны эрх хүрэхгүй байна. Та эхлээд логин хийнэ үү. Authorization header-ээр эсвэ Cookie ашиглан токеноо дамжуулна уу.",
+      "이 작업을 수행할 권한이 없습니다. 먼저 로그인을 해주세요. Authorization 헤더를 통해 또는 쿠키를 사용하여 토큰을 전달합니다.",
       401
     );
   }
