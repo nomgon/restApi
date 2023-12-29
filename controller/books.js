@@ -9,7 +9,7 @@ const User = require("../models/User");
 // api/v1/books
 exports.getBooks = asyncHandler(async (req, res, next) => {
   const page = parseInt(req.query.page) || 1;
-  const limit = parseInt(req.query.limit) || 5;
+  const limit = parseInt(req.query.limit) || 20;
   const sort = req.query.sort;
   const select = req.query.select;
 
@@ -47,15 +47,18 @@ exports.getCategoryBooks = asyncHandler(async (req, res, next) => {
   const select = req.query.select;
   let search = req.query.search;
 
-  ["select", "sort", "page", "limit","search"].forEach((el) => delete req.query[el]);
+  ["select", "sort", "page", "limit", "search"].forEach(
+    (el) => delete req.query[el]
+  );
 
   const pagination = await paginate(page, limit, Book);
-if (!search) search = "";
+  if (!search) search = "";
   //req.query, select
   const books = await Book.find(
-    { ...req.query, 
+    {
+      ...req.query,
       category: req.params.categoryId,
-      name:{$regex: search, $options:"i"}
+      name: { $regex: search, $options: "i" },
     },
     select
   )
