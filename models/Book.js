@@ -5,10 +5,10 @@ const BookSchema = new mongoose.Schema(
   {
     name: {
       type: String,
-      required: [true, "Номын нэрийг оруулна уу"],
+      required: [true, "Үүсгэн байгуулагчийн нэрийг оруулна уу"],
       unique: true,
       trim: true,
-      maxlength: [250, "Номын нэрний урт дээд тал нь 250 тэмдэгт байх ёстой."],
+      maxlength: [360, "Номын нэрний урт дээд тал нь 360 тэмдэгт байх ёстой."],
     },
     photo: {
       type: String,
@@ -16,11 +16,11 @@ const BookSchema = new mongoose.Schema(
     },
     author: {
       type: String,
-      required: [true, "Зохиогчийн нэрийг оруулна уу"],
+      required: [true, "Facebook хаягийн холбоосыг оруулна уу"],
       trim: true,
       maxlength: [
-        50,
-        "Зохиогчийн нэрний урт дээд тал нь 50 тэмдэгт байх ёстой.",
+        390,
+        "Зохиогчийн нэрний урт дээд тал нь 390 тэмдэгт байх ёстой.",
       ],
     },
     averageRating: {
@@ -30,15 +30,18 @@ const BookSchema = new mongoose.Schema(
     },
     price: {
       type: Number,
-      required: [true, "Номны үнийг оруулна уу"],
+      required: [true, "Утасны дугаар оруулна уу"],
       min: [5, "Номын үнэ хамгийн багадаа 5 доллар байх ёстой"],
     },
     balance: Number,
     content: {
       type: String,
-      required: [true, "Номын тайлбарыг оруулна уу"],
+      required: [true, "Хаяг, мэргэжлийг оруулна уу"],
       trim: true,
-      maxlength: [5000, "Номын нэрний урт дээд тал нь 20 тэмдэгт байх ёстой."],
+      maxlength: [
+        20000,
+        "Номын агуулгын урт дээд тал нь 20,000 тэмдэгт байх ёстой.",
+      ],
     },
     bestseller: {
       type: Boolean,

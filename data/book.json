@@ -8,10 +8,7 @@
     "balance": 4,
     "content": "Over the years, React and React Native has proven itself among JavaScript developers as a popular choice for a complete and practical guide to the React ecosystem. This fourth edition comes with the latest features, enhancements, and fixes to align with React 18, while also being compatible with React Native. It includes new chapters covering critical features and concepts in modern cross-platform app development with React.",
     "bestseller": true,
-    "available": [
-      "new",
-      "pdf"
-    ],
+    "available": ["new", "pdf"],
     "createUser": "5ea3e83bf932ea3944956bf9",
     "updateUser": "5ea3e83bf932ea3944956bf9",
     "category": "5e96cc1ba816c94e009a9c9e"
@@ -25,11 +22,7 @@
     "balance": 8,
     "content": "This book distills the core concepts of React and draws together its key features with neat summaries, thus perfectly complementing other in-depth teaching resources. So, whether you've just finished Max's React video course and are looking for a handy reference tool, or you've been using a variety of other learning materials and now need a single study guide to bring everything together, this is the ideal companion to support you through your next React projects. Plus, it's fully up to date for React 18, so you can be sure you're ready to go with the latest version.",
     "bestseller": true,
-    "available": [
-      "new",
-      "old",
-      "kindle"
-    ],
+    "available": ["new", "old", "kindle"],
     "createUser": "5ea015a84448022f50c58be5",
     "updateUser": "5ea015a84448022f50c58be5",
     "category": "5e96cc1ba816c94e009a9c9e"
@@ -43,10 +36,7 @@
     "balance": 1,
     "content": " This book demonstrates the capabilities of JavaScript for web application development by combining theoretical learning with code exercises and fun projects that you can challenge yourself with. The guiding principle of the book is to show how straightforward JavaScript techniques can be used to make web apps ranging from dynamic websites to simple browser-based games.",
     "bestseller": true,
-    "available": [
-      "new",
-      "old"
-    ],
+    "available": ["new", "old"],
     "createUser": "5ea015cec0f5e551d8d1615d",
     "updateUser": "5ea015cec0f5e551d8d1615d",
     "category": "5e96cc1ba816c94e009a9c9e"
@@ -60,12 +50,7 @@
     "balance": 7,
     "content": " Professional React Native provides the ultimate coverage of essential concepts, best practices, advanced processes, and tips for everyday developer problems. The book makes it easy to understand how React Native works under the hood using step-by-step explanations and practical examples so you can use this knowledge to develop highly performant apps. As you follow along, you'll learn the difference between React and React Native, navigate the React Native ecosystem, and revisit the basics of JavaScript and TypeScript needed to create a React Native application. What's more, you'll work with animations and even control your app with gestures. Finally, you'll be able to structure larger apps and improve developer efficiency through automated processes, testing, and continuous integration.",
     "bestseller": true,
-    "available": [
-      "new",
-      "old",
-      "kindle",
-      "pdf"
-    ],
+    "available": ["new", "old", "kindle", "pdf"],
     "createUser": "5ea015a84448022f50c58be5",
     "updateUser": "5ea015a84448022f50c58be5",
     "category": "5e96cc1ba816c94e009a9c9e"
@@ -79,9 +64,7 @@
     "balance": 10.0,
     "content": "The steps in this book break down an easy to understand process that anyone can follow to success in passive real estate investing. The book is written as a story so you can easily relate events to your life in a practical way. It wasn't easy to learn the lessons of becoming financially free, but it has been extremely rewarding. I am looking forward to having you join me on this journey so we can learn together and pay it forward to those who will come after us. Growing up money was always a concern and I remember it being one of the most difficult topics in my family and for many of the other families growing up in the small city of Fall River, Massachusetts. When I understood that real Estate was the key to wealth, I vowed that I would commit my life to figuring out how money and Real Estate worked so that one day I could share that knowledge with the people who would need it most.",
     "bestseller": false,
-    "available": [
-      "pdf"
-    ],
+    "available": ["pdf"],
     "createUser": "5ea015a84448022f50c58be5",
     "updateUser": "5ea015a84448022f50c58be5",
     "category": "5e9047fd49941f52dcb01b35"
@@ -95,10 +78,7 @@
     "balance": 14,
     "content": "  Why are so many people unhappy at work, if they choose the work they do? After teaching as a professor at the New York University Leonard N. Stern School of Business, The Wharton School at the University of Pennsylvania, and Ivey Business School in Canada, Bryan Hong shares his observations based on hundreds of conversations with his students before and after graduation.",
     "bestseller": false,
-    "available": [
-      "kindle",
-      "pdf"
-    ],
+    "available": ["kindle", "pdf"],
     "createUser": "5ea015cec0f5e551d8d1615d",
     "updateUser": "5ea015cec0f5e551d8d1615d",
     "category": "5e9047fd49941f52dcb01b35"
@@ -112,9 +92,7 @@
     "balance": 6,
     "content": "Be Proactive, Begin with the End in Mind, Put First Things First, Think Win/Win, Seek First to Understand, Then to Be Understood, Synergize, Sharpen the Saw",
     "bestseller": false,
-    "available": [
-      "new"
-    ],
+    "available": ["new"],
     "createUser": "5ea015cec0f5e551d8d1615d",
     "updateUser": "5ea015a84448022f50c58be5",
     "category": "5e9047fd49941f52dcb01b35"
@@ -128,10 +106,7 @@
     "balance": 11,
     "content": "All of us have what it takes to make it in today's competitive and changing world. You may have doubted your ability to get the job done in the past, but something else may have been getting in the way of your success. The key to ultimate achievement has very little to do with your education or skill level. The secret to accomplishing great things is simple: Find and pursue the kind of work you are meant to do - your purpose. No one said choosing your life's purpose would be easy.",
     "bestseller": false,
-    "available": [
-      "new",
-      "old"
-    ],
+    "available": ["new", "old"],
     "createUser": "5ea015cec0f5e551d8d1615d",
     "updateUser": "5ea015a84448022f50c58be5",
     "category": "5e9047fd49941f52dcb01b35"
@@ -145,9 +120,7 @@
     "balance": 7,
     "content": "By battling alongside Athos, Porthos, and Aramis against their adversaries, d'Artagnan demonstrates that he possesses the heart of a Musketeer and earns a position among them. Soon, d'Artagnan and the brave trio will have to combine all of their wits and sword skills to protect the queen's dignity and defeat Cardinal Richelieu.",
     "bestseller": false,
-    "available": [
-      "new"
-    ],
+    "available": ["new"],
     "createUser": "5ea015a84448022f50c58be5",
     "updateUser": "5ea015a84448022f50c58be5",
     "category": "5e90434cd433fa11b078ed8a"
@@ -161,12 +134,7 @@
     "balance": 11,
     "content": " Twenty Years After includes an introduction by A. M. de Medeiros, University of Kent at Canterbury. A year after the publication of The Three Musketeers, Alexandre Dumas produced a sequel worthy in every respect of the original. In Twenty Years After, the much beloved D'Artaganan, Athos, Porthos and Aramis reunite to fight the forces of evil. In the original novel they defeated Milady, a formidable foe; now they need to face her vengeful son Mordaunt, as well as countering the machinations of the sinister Cardinal Mazarin. ",
     "bestseller": false,
-    "available": [
-      "new",
-      "old",
-      "kindle",
-      "pdf"
-    ],
+    "available": ["new", "old", "kindle", "pdf"],
     "createUser": "5ea3e83bf932ea3944956bf9",
     "updateUser": "5ea3e83bf932ea3944956bf9",
     "category": "5e90434cd433fa11b078ed8a"
@@ -180,12 +148,7 @@
     "balance": 44,
     "content": "The Man in the Iron Mask is the final episode in the cycle of novels featuring Dumas celebrated foursome of D Artagnan, Athos, Porthos and Aramis, who first appeared in The Three Musketeers. Some thirty-five years on, the bonds of comradeship are under strain as they end up on different sides in a power struggle that may undermine the young Louis XIV and change the face of the French monarchy. In the fast-paced narrative style that was his trademark, Dumas pitches us straight into the action. What is the secret shared by Aramis and Madame de Chevreuse? Why does the Queen Mother fear its revelation? Who is the mysterious prisoner in the Bastille? And what is the nature of the threat he poses? Dumas, the master storyteller, keeps us reading until the climactic scene in the grotto of Locmaria, a fitting conclusion to the epic saga of the musketeers",
     "bestseller": false,
-    "available": [
-      "new",
-      "old",
-      "kindle",
-      "pdf"
-    ],
+    "available": ["new", "old", "kindle", "pdf"],
     "createUser": "5ea3e83bf932ea3944956bf9",
     "updateUser": "5ea3e83bf932ea3944956bf9",
     "category": "5e90434cd433fa11b078ed8a"
@@ -199,10 +162,7 @@
     "balance": 123,
     "content": "The Count of Monte Cristo by Alexandre Dumas. With an Introduction and Notes by Keith Wren, University of Kent at Canterbury. The story of Edmund Dantes, self-styled Count of Monte Cristo, is told with consummate skill. The victim of a miscarriage of justice, Dantes is fired by a desire for retribution and empowered by a stroke of providence. In his campaign of vengeance, he becomes an anonymous agent of fate. The sensational narrative of intrigue, betrayal, escape, and triumphant revenge moves at a cracking pace. Dumas' novel presents a powerful conflict between good and evil embodied in an epic saga of rich diversity that is complicated by the hero's ultimate discomfort with the hubristic implication of his own actions.",
     "bestseller": true,
-    "available": [
-      "new",
-      "kindle"
-    ],
+    "available": ["new", "kindle"],
     "createUser": "5ea015a84448022f50c58be5",
     "updateUser": "5ea015a84448022f50c58be5",
     "category": "5e90434cd433fa11b078ed8a"
@@ -216,12 +176,7 @@
     "balance": 0.0,
     "content": "Discover the story of Robin Hood's youth, delivered to humble foresters by a mysterious stranger, his skill as a master archer, and his adventures alongside a classic cast of characters - from Maid Marian to Little John, Will Scarlett to Friar Tuck, and more.",
     "bestseller": false,
-    "available": [
-      "new",
-      "old",
-      "kindle",
-      "pdf"
-    ],
+    "available": ["new", "old", "kindle", "pdf"],
     "createUser": "5ea015a84448022f50c58be5",
     "updateUser": "5ea015a84448022f50c58be5",
     "category": "5e90434cd433fa11b078ed8a"
@@ -235,11 +190,7 @@
     "balance": 0.0,
     "content": "Words carry powerful energy and have an astonishing impact on your life. With Power Words, you can generate new actions and lightning-fast results! Use them to sharpen your focus, start new projects, break old addictions, attract relationships, and succeed in any number of goals—from weight loss to finding a job. Each word triggers its own specific purpose and activity. Certain words elevate; others ignite action. And in just moments, they can be yours to direct. These high-energy words can immediately lift your power and alter every aspect of your reality—from the simple, such as your posture and sleep patterns, to the life changing, such as your creativity, personal wealth, and relationships. Choose the precise words that provide extraordinary success, and learn to direct profound force to all of your goals. Power Words can create an electrical current in your life that will light up your world!",
     "bestseller": true,
-    "available": [
-      "old",
-      "kindle",
-      "pdf"
-    ],
+    "available": ["old", "kindle", "pdf"],
     "createUser": "5ea015a84448022f50c58be5",
     "updateUser": "5ea015a84448022f50c58be5",
     "category": "5e90478549941f52dcb01b34"
@@ -254,9 +205,7 @@
     "balance": 4,
     "content": "Discover how much power exists in the words we see, hear, and speak on a daily basis. The Bible says life and death is in the power of the tongue. The Power of Words is a comprehensive guide that will show you. How to control the words that you speak to ensure that you speak life instead of death, into your finances, your marriage, your children, your business or career, and most importantly, your spiritual life.How to develop successful habits with the secret power of words.",
     "bestseller": false,
-    "available": [
-      "old"
-    ],
+    "available": ["old"],
     "createUser": "5ea015a84448022f50c58be5",
     "updateUser": "5ea015a84448022f50c58be5",
     "category": "5e90478549941f52dcb01b34"
@@ -270,10 +219,7 @@
     "balance": 9,
     "content": "Change your life, one small step at a time. Make the choice today to start this transformative journey, and equip yourself with the necessary tools to become the best version of yourself. Don't miss this opportunity to embrace a richer and more fulfilling life.",
     "bestseller": false,
-    "available": [
-      "kindle",
-      "pdf"
-    ],
+    "available": ["kindle", "pdf"],
     "createUser": "5ea015a84448022f50c58be5",
     "updateUser": "5ea015a84448022f50c58be5",
     "category": "5e90478549941f52dcb01b34"
@@ -288,10 +234,7 @@
     "balance": 33,
     "content": "Millions of people around the world have improved their lives through the timeless advice David Schwartz offers in The Magic of Thinking Big. In this best-selling audiobook, Schwartz proves you don't need innate talent to become successful, but you do need to understand the habit of thinking and behaving in ways that will get you there.",
     "bestseller": false,
-    "available": [
-      "new",
-      "pdf"
-    ],
+    "available": ["new", "pdf"],
     "createUser": "5ea015a84448022f50c58be5",
     "updateUser": "5ea015a84448022f50c58be5",
     "category": "5e90478549941f52dcb01b34"
@@ -305,9 +248,7 @@
     "balance": 6,
     "content": "Before you can achieve anything in life, you need a solid foundation of self-discipline. Talent, intelligence, and skill are only a part of the equation. Positive thinking, affirmations, and vision boards are only a part of the equation. If you want to turn your dreams into reality, you need self-discipline.",
     "bestseller": false,
-    "available": [
-      "old"
-    ],
+    "available": ["old"],
     "createUser": "5ea015a84448022f50c58be5",
     "updateUser": "5ea015a84448022f50c58be5",
     "category": "5e90478549941f52dcb01b34"
